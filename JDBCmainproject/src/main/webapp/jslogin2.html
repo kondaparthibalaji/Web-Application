@@ -1,0 +1,90 @@
+<html>
+	<head>
+	<title>LOGIN PAGE</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+		<script>
+			function show(){
+					var username=document.getElementById("username").value;
+					var password=document.getElementById("password").value;
+					var password=document.getElementById("role").value;
+				if(username==""||password==""||role==""){
+					document.getElementById("p2").innerHTML="*Enter all mandatory fields";
+					document.getElementById("p2").style.color="red";
+					return false;
+					}
+					else{
+					return true;
+					}
+					}
+			function disppwd(){
+					document.getElementById("pwd").innerHTML="password must be charecters only";
+					} 
+					
+			</script>
+				<style>
+					.size{
+						height:45px;
+						width:320px;
+						}
+					.row1{
+						padding-bottom:15px;
+						}
+					</style>
+	</head>
+	<body>
+		<div class="container" style="background-color:#85f6fa" >
+			<div class="row row1">
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-8">
+					<h4>LOGIN FORM</h4>
+				</div>
+			</div>
+				<form name="registration" method="post" action="login2" onsubmit="return show()">
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-8">
+							<div class="row row1">
+								<div class="col-md-6">
+									<input class="size" type="text" name="username" id="username" placeholder="USERNAME" REQUIRED>
+								</div>
+								<div class="col-md-6">
+									<input onfocus="disppwd()" class="size" type="password" name="password" id="password" placeholder="PASSWORD" REQUIRED>
+										<p id="pwd"></p>
+								</div>
+							</div>
+							</div>
+						<div class="col-md-2">
+						</div>
+					</div>
+					<div class="row row1">
+						<div class="col-md-2">
+						</div>
+						<div class="col-md-6">
+							<input list="rol" class="size" type="text" name="role" id="role" placeholder="ROLE" REQUIRED>
+											<datalist id="rol">
+												<option value="student">
+												<option value="faculty">
+												<option value="admin">
+											</datalist>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-6">
+									<button type="submit" class="btn btn-primary">SUBMIT</button>
+									<p id="p2"></p>
+								</div>
+							</div>
+							</div>
+					</div>
+				</form>
+			</div>
+						
+	</body>
+</html>

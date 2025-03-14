@@ -1,0 +1,111 @@
+<html>
+	<head>
+	<title>COURSE FORM</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+		<script>
+			function show(){
+					var courseid=document.getElementById("courseid").value;
+					var coursename=document.getElementById("coursename").value;
+					var trainer=document.getElementById("trainer").value;
+					var fee=document.getElementById("fee").value;
+					var duration=document.getElementById("duration").value;
+					var location=document.getElementById("location").value;
+				if(courseid==""||coursename==""||trainer==""||fee==""||duration==""||location==""){
+					document.getElementById("p4").innerHTML="*Enter all mandatory fields";
+					document.getElementById("p4").style.color="red";
+					return false;
+					}
+					else{
+					return true;
+					}
+					}
+				</script>
+				<style>
+					.row1{
+					padding-bottom:15px;
+					}
+					.size{
+						height:45px;
+						width:320px;
+						}
+					</style>
+		</head>
+	<body>
+		<div class="container" style="background-color:#85f6fa" >
+			<div class="row row1">
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-6">
+					<h4>COURSE FORM</h4>
+				</div>
+			</div>
+				<form name="registration" method="post" action="cor" onsubmit="return show()">
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-8">
+							<div class="row row1">
+								<div class="col-md-6">
+									<input class="size" type="text" name="courseid" id="courseid" placeholder="COURSEID" REQUIRED>
+								</div>
+								<div class="col-md-6">
+								   <input list="crs" type="text" class="size" name="coursename" id="coursename" placeholder="COURSENAME" REQUIRED>
+											<datalist id="crs">
+												<option value="Java">
+												<option value="Python">
+												<option value="Devops">
+												<option value="Testing">
+												<option value="Power bi">
+											</datalist>
+								</div>
+							</div>
+							</div>
+						<div class="col-md-2">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-8">
+							<div class="row row1">
+								<div class="col-md-6">
+									<input class="size" type="text" name="trainer" id="trainer" placeholder="TRAINER" REQUIRED>
+								</div>
+								<div class="col-md-6">
+									<input class="size" type="text" name="fee" id="fee" placeholder="FEE" REQUIRED>
+								</div>
+							</div>
+							</div>
+						<div class="col-md-2">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-8">
+							<div class="row row1">
+								<div class="col-md-6">
+									<input class="size" type="text" name="duration" id="duration" placeholder="DURATION" REQUIRED>
+								</div>
+								<div class="col-md-6">
+									<input class="size" type="text" name="location" id="location" placeholder="LOCATION" REQUIRED>
+								</div>
+							</div>
+							</div>
+						<div class="col-md-2">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-6">
+								<button type="submit" class="btn btn-primary">SUBMIT</button>
+								<p id="p4"></p>
+							</div>
+					</div>
+					</form>
+			</div>
+				
+		</body>
+</html>

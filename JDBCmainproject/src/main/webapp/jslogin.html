@@ -1,0 +1,251 @@
+<html>
+	<head>
+		<title>STUDENT PAGE</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+		<script>
+			function validateEmailInput() {
+						const mailidInput = document.getElementById('mailidInput').value;
+						const feedbackElement = document.getElementById('emailFeedback');
+						//const emailRegex = ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$;
+					   if (emailRegex.test(mailidInput)) {
+					   feedbackElement.textContent = " Email is valid"; // Email is valid
+					   } else {
+					   feedbackElement.textContent = "Please enter a valid email address.";
+						}
+						}
+		</script>
+				<style>
+					.row{
+					padding-bottom:10px;
+					}
+					.row1{
+					padding-bottom:0px;
+					}
+					.size{
+						height:45px;
+						width:320px;
+						}
+					</style>
+	</head>
+	<body>
+		<div class="container" style="background-color:#85f6fa" >
+			<div class="row">
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-8">
+					<h4>STUDENT REGISTER FORM</h4>
+				</div>
+			</div>
+				<form name="registration" method="post" action="reg" onsubmit="return show()">
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-6">
+									<input type="text" class="size" id="name1" type="text" name="firstname" id="firstname" placeholder="FIRSTNAME" REQUIRED>
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="size" id="name2" type="text" name="lastname" id="lastname" placeholder="LASTNAME" REQUIRED>
+								</div>
+							</div>
+							</div>
+						<div class="col-md-2">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-6">
+									<input type="text" class="size" id="mobile1" type="text" maxlength="10" name="mobilenumber" id="mobilenumber" placeholder="MOBILENUMBER" REQUIRED>
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="size" name="mailid" id="mailidInput" oninput="validateEmailInput()" placeholder="MAILID" REQUIRED>
+										<span id="emailFeedback" style="color:blue;"></span>
+								</div>
+							</div>
+							</div>
+						<div class="col-md-2">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-6">
+										<input list="gd" class="size" type="text" name="gender" id="gender" placeholder="GENDER" REQUIRED>
+											<datalist id="gd">
+												<option value="Male">
+												<option value="Female">
+												<option value="Other">
+											</datalist>
+										
+								</div>
+								<div class="col-md-6">
+									<input list="grd" type="text" class="size" name="graduation" id="graduation" placeholder="GRADUATION" REQUIRED>
+										<datalist id="grd">
+											<option value="DEGREE">
+											<option value="B-TECH">
+											<option value="MBA">
+											<option value="MCA">
+											<option value="M-TECH">
+										</datalist>
+								</div>
+							</div>
+							</div>
+						<div class="col-md-2">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-6">
+									<input type="text" class="size" name="branch" id="branch" placeholder="BRANCH" REQUIRED>
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="size" name="yearofpassedout" id="yearofpassedout" placeholder="YEAROFPASSEDOUT" REQUIRED>
+								</div>
+							</div>
+							</div>
+						<div class="col-md-2">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-6">
+									<input list="course1" type="text" class="size" name="course" id="course" placeholder="COURSE" REQUIRED>
+										<datalist id="course1">
+											<option value="Java">
+											<option value="Python">
+											<option value="Devops">
+											<option value="Power bi">
+											<option value="Testing">
+										</datalist>
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="size" name="dateofbirth" id="dateofbirth" placeholder="DATEOFBIRTH" REQUIRED>
+								</div>
+							</div>
+							</div>
+						<div class="col-md-2">
+						</div>
+					</div>
+					<div class="row row1">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-6">
+									<input type="text" class="size" name="username" id="username" placeholder="USERNAME" REQUIRED>
+								</div>
+								<div class="col-md-6">
+									<input onfocus="disppwd()" onblur="verifypwd()" class="size" type="password" name="password" id="password" placeholder="PASSWORD" REQUIRED>
+										<p id="pwd"></p>
+								</div>
+							</div>
+							</div>
+						<div class="col-md-2">
+						</div>
+					</div>
+					
+					<div class="row row1">
+						<div class="col-md-2">
+						</div>
+							<div class="col-md-6">
+							<div class="row">
+								<div class="col-md-6">
+									<button type="submit" class="btn btn-primary">SUBMIT</button>
+									<p id="p1"></p>
+								</div>
+							</div>
+							</div>
+					</div>
+				</form>
+		</div>
+			<script>
+			function show(){
+					var firstname=document.getElementById("firstname").value;
+					var lastname=document.getElementById("lastname").value;
+					var mobilenumber=document.getElementById("mobilenumber").value;
+					var mailid=document.getElementById("mailid").value;
+					var dateofbirth=document.getElementById("dateofbirth").value;
+					var graduation=document.getElementById("graduation").value;
+					var branch=document.getElementById("branch").value;
+					var yearofpassedout=document.getElementById("yearofpassedout").value;
+					var course=document.getElementById("course").value;
+					var username=document.getElementById("username").value;
+					var password=document.getElementById("password").value;
+				if(firstname==""||lastname==""||mobilenumber==""||mailid==""||dateofbirth==""||graduation==""||branch==""||yearofpassedout==""||course==""||username==""||password=="")
+					{
+					return false;
+					}
+					else{
+					return true;
+					}
+					}
+					function disppwd(){
+					document.getElementById("pwd").innerHTML="password must be charecters only";
+					}
+					function dispcpwd(){
+					document.getElementById("cpwd").innerHTML="confirmpassword must be charecters only";
+					}
+					 
+					 function verifypwd(){
+					 var pwd=document.getElementById("password").value;
+					 var cpwd=document.getElementById("confirmpassword").value;
+						if(pwd==cpwd){
+						document.getElementById("pwd").innerHTML="password and confirmpassword matched";
+						document.getElementById("cpwd").innerHTML="password and confirmpassword matched";
+						document.getElementById("pwd").style.color="green";
+						document.getElementById("cpwd").style.color="green";
+						}
+						else{
+						document.getElementById("pwd").innerHTML="password and confirmpassword not matched";
+						document.getElementById("cpwd").innerHTML="password and confirmpassword not matched";
+						document.getElementById("pwd").style.color="red";
+						document.getElementById("cpwd").style.color="red";
+						
+						
+						}
+						}
+		
+						document.getElementById("mobile1").addEventListener("keypress",fun1);
+							function fun1(event)
+							{
+							var ch=event.which;
+							if(!((ch>=48&&ch<=57)||(ch==8)||(ch==0)))
+							{
+							event.preventDefault();
+							}
+							}
+						document.getElementById("name1").addEventListener("keypress",fun2);
+							function fun2(event)
+							{
+							var ch=event.which;
+							if(!((ch>=65&&ch<=90)||(ch==8)||(ch==0)||(ch==32)))
+							{
+							event.preventDefault();
+							}
+							}
+						document.getElementById("name2").addEventListener("keypress",fun3);
+							function fun3(event)
+							{
+							var ch=event.which;
+							if(!((ch>=65&&ch<=90)||(ch==8)||(ch==0)||(ch==32)))
+							{
+							event.preventDefault();
+							}
+							}
+			</script>
+					
+	</body>
+</html>
